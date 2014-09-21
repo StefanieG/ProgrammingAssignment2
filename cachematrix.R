@@ -58,9 +58,9 @@ cacheSolve <- function(x, ...) {
 
 ## Test case of the above function pair:
 ## A BIG THANK YOU to all active posters in the discussion forum!
-## x <- matrix(1:4, ncol=2)
-## a <- makeCacheMatrix(x)
-## a$get()
+## > x <- matrix(1:4, ncol=2)
+## > a <- makeCacheMatrix(x)
+## > a$get()
         ##      [,1] [,2]
         ##[1,]    1    3
         ##[2,]    2    4
