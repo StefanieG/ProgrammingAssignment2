@@ -42,7 +42,7 @@ cacheSolve <- function(x, ...) {
         
         ## if the inverse has already been calculated:
         if(!is.null(inv)) {
-                message("getting cached matrix")
+                message("getting cached data")
                 return(inv)
         }
         
@@ -55,3 +55,25 @@ cacheSolve <- function(x, ...) {
         
         return(inv)
 }
+
+## Test case of the above function pair:
+## A BIG THANK YOU to all active posters in the discussion forum!
+## x <- matrix(1:4, ncol=2)
+## a <- makeCacheMatrix(x)
+## a$get()
+        ##      [,1] [,2]
+        ##[1,]    1    3
+        ##[2,]    2    4
+
+## No cache in the first run:
+## > cacheSolve(a)
+        ##      [,1] [,2]
+        ## [1,]   -2  1.5
+        ## [2,]    1 -0.5
+
+## Retrieves from the cache the second time:
+## > cacheSolve(a)
+        ##getting cached data
+        ##      [,1] [,2]
+        ##[1,]   -2  1.5
+        ##[2,]    1 -0.5
